@@ -52,23 +52,23 @@ User Goal
 
 | Ministry | ID | Focus |
 |----------|-----|-------|
-| 吏部 People | libu | HR, scheduling, team status |
-| 户部 Data | hubu | Data analysis, budgets, reports |
-| 礼部 Comms | libu_rites | Email, external comms, meeting notes |
-| 兵部 Ops | bingbu | Task execution, project management |
-| 刑部 Audit | xingbu | Quality review, compliance |
-| 工部 Build | gongbu | Document creation, tooling, templates |
+| 吏部 People | `libu` | HR, scheduling, team status |
+| 户部 Data | `hubu` | Data analysis, budgets, reports |
+| 礼部 Comms | `libu_rites` | Email, external comms, meeting notes |
+| 兵部 Ops | `bingbu` | Task execution, project management |
+| 刑部 Audit | `xingbu` | Quality review, compliance |
+| 工部 Build | `gongbu` | Document creation, tooling, templates |
 
 ## Quick Commands
 
 | Command | Effect |
 |---------|--------|
-| 议 | Enter roundtable discussion |
-| 干 | Skip discussion, go straight to execution |
-| 拍板 | Finalize decisions, enter execution pipeline |
-| 封驳 | Veto current plan |
-| 交差 | Collect and deliver results |
-| 回顾 | Review history and pending actions |
+| `议` | Enter roundtable discussion |
+| `干` | Skip discussion, go straight to execution |
+| `拍板` | Finalize decisions, enter execution pipeline |
+| `封驳` | Veto current plan |
+| `交差` | Collect and deliver results |
+| `回顾` | Review history and pending actions |
 
 ## File Structure
 
@@ -87,13 +87,13 @@ chaotang/
 ## Installation
 
 ### Claude Desktop / Cowork
-Save the chaotang.skill file and install via the skill installer.
+Save the `chaotang.skill` file and install via the skill installer.
 
 ### Claude Code
-Copy the chaotang/ directory to your project's .claude/skills/ folder.
+Copy the `chaotang/` directory to your project's `.claude/skills/` folder.
 
 ### Other LLM Systems
-Use SKILL.md as the system prompt, and reference files as needed per phase.
+Use `SKILL.md` as the system prompt, and reference files as needed per phase.
 
 ## Test Results
 
@@ -102,6 +102,8 @@ Use SKILL.md as the system prompt, and reference files as needed per phase.
 | Assertion Pass Rate | **100%** (21/21) | 17.9% (4/21) |
 | Avg Time | 238.3s | 74.9s |
 | Avg Tokens | 67,334 | 38,217 |
+
+The time/token overhead reflects the cost of structured multi-agent coordination — expected for complex tasks. The fast-track mode (skipping roundtable) significantly reduces overhead for simpler tasks.
 
 ## License
 
